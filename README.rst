@@ -2,6 +2,8 @@
 lfe-rebar-plugin
 ########
 
+A rebar plugin for common tasks of LFE-based projects, witten in LFE
+
 Introduction
 ============
 

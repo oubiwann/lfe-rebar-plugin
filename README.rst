@@ -62,7 +62,7 @@ stdout, they don't perform any changes to the system):
 
 
 The are displayed below "in action". Note that these commands are run in the
-working directory (``git clone`` of ``lfe-sample-rebar-plugin``) after a
+working directory (``git clone`` of ``lfe-rebar-plugin``) after a
 ``make compile`` has been done:
 
 
@@ -83,12 +83,10 @@ working directory (``git clone`` of ``lfe-sample-rebar-plugin``) after a
     .
     .
     .
-    Commands for the 'lfe-sample-rebar-plugin` rebar plugin:
+    Commands for the 'lfe-rebar-plugin` rebar plugin:
 
-      demo-run-in-basedir            Display a demo message while processing the current dir
-      demo-run-in-other-dirs         Displa a demo message while processing deps dirs
-      list-plugins               List all the plugins defined for the current dir
-      commands               List both the default commands and those for the plugins
+      list-plugins                   List all the plugins defined for the current dir
+      commands                       List both the default commands and those for the plugins
 
 
 ``list-plugins``
@@ -110,13 +108,13 @@ Development
 
 To add new plugin commands, simply do the following:
 
-1. create a command function that takes ``rebar-config`` and ``app-file`` as
+#. create a command function that takes ``rebar-config`` and ``app-file`` as
    parameters
 
-1. update the ``get-commands-help`` function with the new command function you
+#. update the ``get-commands-help`` function with the new command function you
    added
 
-1. submit a pull request!
+#. submit a pull request!
 
 
 .. Links

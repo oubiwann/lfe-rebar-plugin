@@ -83,7 +83,7 @@ working directory (``git clone`` of ``lfe-rebar-plugin``) after a
     .
     .
     .
-    Commands for the 'lfe-rebar-plugin` rebar plugin:
+    Commands for the 'lfe-rebar-plugin' rebar plugin:
 
       list-plugins                   List all the plugins defined for the current dir
       commands                       List both the default commands and those for the plugins

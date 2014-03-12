@@ -51,7 +51,7 @@
 (defun get-commands-help ()
   (print-default-commands)
   (: io format '"
-Commands for the '~s` rebar plugin:
+Commands for the '~s' rebar plugin:
 
   list-plugins\t\t\t     List all the plugins defined for the current dir
   commands\t\t\t     List both the default commands and those for the plugins

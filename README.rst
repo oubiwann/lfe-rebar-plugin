@@ -52,9 +52,9 @@ it.
 Usage
 =====
 
-Once you've got the sample plugin compiled, you can run the plugin's functions.
-This sample plugin provides the follwoing commands (which both only print to
-stdout, they don't perform any changes to the system):
+Once you've got the plugin compiled, you can run the plugin's functions.
+This plugin provides the follwoing commands (which both only print to
+stdout; they don't perform any changes to the system):
 
 * ``list-plugins``
 

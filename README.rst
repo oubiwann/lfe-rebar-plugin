@@ -76,7 +76,7 @@ working directory (``git clone`` of ``lfe-rebar-plugin``) after a
     ==> lfeunit (commands)
     ==> lfe-utils (commands)
     ==> rebar (commands)
-    ==> lfe-sample-rebar-plugin (commands)
+    ==> lfe-rebar-plugin (commands)
 
     clean                                Clean
     compile                              Compile sources
@@ -99,8 +99,8 @@ working directory (``git clone`` of ``lfe-rebar-plugin``) after a
     ==> lfeunit (list-plugins)
     ==> lfe-utils (list-plugins)
     ==> rebar (list-plugins)
-    ==> lfe-sample-rebar-plugin (list-plugins)
-    ['lfe-sample-rebar-plugin']
+    ==> lfe-rebar-plugin (list-plugins)
+    ['lfe-rebar-plugin']
 
 
 Development

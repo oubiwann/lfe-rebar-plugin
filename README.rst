@@ -112,8 +112,10 @@ To add new plugin commands, simply do the following:
 
 1. create a command function that takes ``rebar-config`` and ``app-file`` as
    parameters
+
 1. update the ``get-commands-help`` function with the new command function you
    added
+
 1. submit a pull request!
 
 

@@ -1,13 +1,13 @@
-########
+################
 lfe-rebar-plugin
-########
+################
 
-A rebar plugin for common tasks of LFE-based projects, witten in LFE
 
 Introduction
 ============
 
-Add content to me here!
+A rebar plugin for common tasks of LFE-based projects, witten in LFE
+
 
 Dependencies
 ------------
@@ -21,18 +21,104 @@ directory of this project when you run ``make deps``:
 * `LFE`_ (Lisp Flavored Erlang; needed only to compile)
 * `lfeunit`_ (needed only to run the unit tests)
 
+
 Installation
 ============
 
-Add content to me here!
+Installation assumes you have created your LFE ``rebar`` plugin project
+using `lfetool`_.
+
+In order to use this plugin, you will need to do the following:
+
+* Update your project's ``rebar.config`` to add the following:
+
+.. code:: erlang
+
+    {plugins, ['lfe-rebar-plugin']}.
+
+* Update the ``deps`` section of your project's ``rebar.config`` to add the
+  following:
+
+.. code:: erlang
+
+    {'lfe-rebar-plugin',
+        ".*",
+        {git, "git://github.com/lfe/lfe-rebar-plugin.git", "master"}}
+
+After that, you'll need to ``make compile``, and you should be all set to use
+it.
+
 
 Usage
 =====
 
-Add content to me here!
+Once you've got the sample plugin compiled, you can run the plugin's functions.
+This sample plugin provides the follwoing commands (which both only print to
+stdout, they don't perform any changes to the system):
+
+* ``list-plugins``
+
+* ``commands``
+
+
+The are displayed below "in action". Note that these commands are run in the
+working directory (``git clone`` of ``lfe-sample-rebar-plugin``) after a
+``make compile`` has been done:
+
+
+``commands``
+------------
+
+.. code:: bash
+
+    $ ERL_LIBS=. rebar commands
+    ==> lfe (commands)
+    ==> lfeunit (commands)
+    ==> lfe-utils (commands)
+    ==> rebar (commands)
+    ==> lfe-sample-rebar-plugin (commands)
+
+    clean                                Clean
+    compile                              Compile sources
+    .
+    .
+    .
+    Commands for the 'lfe-sample-rebar-plugin` rebar plugin:
+
+      demo-run-in-basedir            Display a demo message while processing the current dir
+      demo-run-in-other-dirs         Displa a demo message while processing deps dirs
+      list-plugins               List all the plugins defined for the current dir
+      commands               List both the default commands and those for the plugins
+
+
+``list-plugins``
+----------------
+
+.. code:: bash
+
+    $ ERL_LIBS=. rebar list-plugins
+    ==> lfe (list-plugins)
+    ==> lfeunit (list-plugins)
+    ==> lfe-utils (list-plugins)
+    ==> rebar (list-plugins)
+    ==> lfe-sample-rebar-plugin (list-plugins)
+    ['lfe-sample-rebar-plugin']
+
+
+Development
+===========
+
+To add new plugin commands, simply do the following:
+
+# create a command function that takes ``rebar-config`` and ``app-file`` as
+  parameters
+# update the ``get-commands-help`` function with the new command function you
+  added
+# submit a pull request!
 
 .. Links
-.. -----
+.. =====
 .. _rebar: https://github.com/rebar/rebar
 .. _LFE: https://github.com/rvirding/lfe
 .. _lfeunit: https://github.com/lfe/lfeunit
+.. _lfetool: https://github.com/lfe/lfetool
